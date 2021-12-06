@@ -18,7 +18,7 @@ pipeline{
         
         stage('Docker Build'){
             steps{
-                sh "docker build . -t ashok11/mpls:${DOCKER_TAG} "
+                sh "docker build . -t ashok11/mpls:0.0.1"
          
             }
         }
