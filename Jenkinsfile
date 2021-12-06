@@ -31,6 +31,13 @@ pipeline{
                 
                 sh "docker push ashok11/mpls:0.0.1"
     
+                
+                     }
+        }
+        
+        stage('Docker Deploy'){
+            steps{
+              ansiblePlaybook credentialsId: 'dev-server', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.in', playbook: 'deploy-docker.yml'
             }
         }
     }
