@@ -9,9 +9,9 @@ pipeline{
             }
         }
         
-        stage('package'){
-            agent any
+       stage('Maven Build'){
             steps{
+                sh "mvn clean package"
          
             }
         }
