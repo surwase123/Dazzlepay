@@ -29,9 +29,8 @@ pipeline{
                 }
                 
                 sh "docker push ashok11/mpls:0.0.1"
-     
-         
+    
             }
         }
     }
-}
+
