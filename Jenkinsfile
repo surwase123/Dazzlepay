@@ -12,6 +12,13 @@ pipeline{
        stage('Maven Build'){
             steps{
                 sh "mvn clean package"
+                
+                     }
+               }
+        
+        stage('Docker Build'){
+            steps{
+                sh "docker build . -t ashok11/mpls:${DOCKER_TAG} "
          
             }
         }
