@@ -24,7 +24,7 @@ pipeline{
             }
         
         stage('DockerHub Push'){
-            stepes{
+            steps{
                     sh "docker login -u ashok11-p Ashok@1234"
                 }
                 
@@ -33,4 +33,4 @@ pipeline{
             }
         }
     }
-
+}
