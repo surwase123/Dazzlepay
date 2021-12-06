@@ -19,6 +19,18 @@ pipeline{
         stage('Docker Build'){
             steps{
                 sh "docker build . -t ashok11/mpls:0.0.1"
+                
+                     }
+            }
+        
+        stage('DockerHub Push'){
+            steps{
+               withCredentials([string(credentialsId: 'docker', variable: '')]) {
+                    sh "docker login -u ashok11-p ${dockerHubPwd}"
+                }
+                
+                sh "docker push ashok11/mpls:0.0.1"
+     
          
             }
         }
