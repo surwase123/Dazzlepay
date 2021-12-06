@@ -34,7 +34,7 @@ pipeline{
                 sh label: '', script: '''rm -rf dockerimg
                       mkdir dockerimg
                       cd dockerimg
-                      cp /var/lib/jenkins/workspace/Dazzlepay/mpls-web/target/mpls.war .
+                      cp /var/lib/jenkins/workspace/Dazzlepay/target/mpls.war .
                       touch dockerfile
                       cat <<EOT>>dockerfile
                       FROM tomcat
