@@ -12,14 +12,7 @@ pipeline{
         stage('package'){
             agent any
             steps{
-                sh 'mvn package'
-            }
-        
-        }
-     stage('Build Docker image'){
-            agent any
-     sh 'docker build -t ashok11/my-app:2.0.0 .'
-       
+         
             }
         }
     }
